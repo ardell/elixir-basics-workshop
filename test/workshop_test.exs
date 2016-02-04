@@ -16,6 +16,14 @@ defmodule WorkshopTest do
     assert W.divide(4, 2) == 2.0
   end
 
+  test "guarded divide doesn't let you divide by zero" do
+    assert_raise(FunctionClauseError, ~r/no function clause matching/, fn -> W.guarded_divide(2, 0) end)
+  end
+
+  test "guarded divide divides two numbers" do
+    assert W.guarded_divide(4, 2) == 2.0
+  end
+
   test "add_one handles empty list" do
     assert W.add_one([]) == []
   end
@@ -40,9 +48,7 @@ defmodule WorkshopTest do
   # test "fizzbuzz" do
   #   assert W.fizzbuzz(3) == "Fizz"
   #   assert W.fizzbuzz(5) == "Buzz"
-  #
-  #   assert W.fizzbuzz(15) == 15
-  #   assert W.fizzbuzz(0) == 0
+  #   assert W.fizzbuzz(15) == "FizzBuzz"
   #   assert W.fizzbuzz("a") == "a"
   # end
   #

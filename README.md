@@ -42,11 +42,8 @@ Once you have it cloned, open the `index.html` file to view the presentation. At
 
 Tests are provided for the exercises as well as some of the examples. Uncomment them if necessary and run all tests with `$ mix test` in the root folder.
 
-## Take Home Exercise
-TODO
-
-## Recommended Reading
-- Pattern Matching In Elixir
-- elixir-lang.org getting started guide
-- Programming Elixir (paid)
-- Elementary Elixir, cool stuff including running code on coworkers machine
+## Further Reading
+- [Elixir Getting Started Guide](http://elixir-lang.org/getting-started/introduction.html)
+- [Elixir School](http://elixirschool.com/)
+- [Pattern Matching In Elixir](https://quickleft.com/blog/pattern-matching-elixir/)
+- [Programming Elixir (paid)](https://pragprog.com/book/elixir12/programming-elixir-1-2)

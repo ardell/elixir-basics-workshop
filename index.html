@@ -43,16 +43,19 @@
 
       <div class="slides">
         <section>
-          <h1>Elixir Basics Workshop</h1>
-          <p>Workshop given at <a href="http://www.meetup.com/boulder-elixir/">Boulder Elixir</a> on January 28th, 2016.</p>
-        </section>
+          <h2>Welcome To Boulder Elixir!</h2>
+          <p>To get set up:</p>
+          <pre><code>
+#1 (optional)
+# You can fork the repo first if you'd like, so it's your own copy
 
-        <section>
-          <h2>Preliminary Questions</h2>
-          <ul>
-            <li>Format: workshops, presentations, both?</li>
-            <li>Timing: last Thursday of every month?</li>
-          </ul>
+#2 Clone the repo
+git clone
+  https://github.com/boulder-elixir/elixir-basics-workshop.git
+
+#3 Open the project in your text editor
+          </code></pre>
+          <p>Ask if you need help!</p>
         </section>
 
         <section>
@@ -66,6 +69,15 @@
             <li>High up-time</li>
             <li>Hot code reloading</li>
             <li>Runs on BEAM (Erlang), 30 years battle tested</li>
+            <li><a href="https://www.youtube.com/watch?v=N4Duii6Yog0">Over 2 Million Concurrent Connections</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Meetup Format & Timing</h2>
+          <ul>
+            <li>Presentations and occasionally workshops</li>
+            <li>Either last Tuesday or Thursday of every month</li>
           </ul>
         </section>
 
@@ -75,7 +87,7 @@
             <li>Learn basic syntax & how to work with Elixir</li>
             <li>Be able to solve simple problems</li>
             <li>Be exposed to Elixir's core features</li>
-            <li>Be inspired to go home and learn more</li>
+            <li><strong>Be inspired to go home and learn more</strong></li>
           </ul>
         </section>
 
@@ -129,7 +141,7 @@ iex> {:ok, val} = {:error, nil}
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 1</h2>
           <ol>
             <li>Load <code>iex</code></li>
             <li>Assign <code>42</code> to a single variable</li>
@@ -137,11 +149,12 @@ iex> {:ok, val} = {:error, nil}
             <li>Try to assign values to the tuple <code>{:ok, value, message}</code> that DON'T pattern match</li>
           </ol>
           <p>-</p>
-          <p>Take 5 minutes. Josh and I will be walking around. If you have a question, raise your hand.</p>
+          <p>Take 5 minutes. Josh and I will be walking around.</p>
+          <p>If you have a question, raise your hand or ask your neighbor.</p>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 1 Answer</h2>
           <pre><code>
 iex> value = 42
 42
@@ -193,18 +206,15 @@ iex> case {:ok, 42} do
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 2</h2>
           <ol>
             <li>Write a <code>case</code> statement that handles the tuples <code>{:ok, 42}</code> and <code>{:error, nil}</code>.</li>
             <li>Add a catch-all condition (underscore)</li>
           </ol>
-          <p>-</p>
-          <p>Take 10 minutes. Josh and I will be walking around.</p>
-          <p>If you have a question, raise your hand or ask your neighbor.</p>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 2 Answer</h2>
           <pre><code>
 iex> case {:ok, 42} do
 ...>   {:ok, value} -> value
@@ -302,19 +312,16 @@ Enum.take(list, 1)
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 3</h2>
           <ol>
             <li>Combine two lists</li>
             <li>Use <code>Enum.map</code> to square this list of numbers: <code>[1, 2, 3, 4]</code></li>
             <li>Using the code from #2 and the pipe character, square a list of numbers and then shuffle them using <code>Enum.shuffle()</code></li>
           </ol>
-          <p>-</p>
-          <p>Take 5 minutes. Josh and I will be walking around.</p>
-          <p>If you have a question, raise your hand or ask your neighbor.</p>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 3 Answer</h2>
           <pre><code>
 iex> [1, 2, 3] ++ [3, 4, 5]
 [1, 2, 3, 3, 4, 5]
@@ -367,19 +374,17 @@ iex> Enum.filter(my_map, fn {key, val} -> val == 2 end)
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 4</h2>
           <ol>
             <li>Given the map <code>%{a: 1, b: 2}</code>, add the element <code>c: 3</code>. Hint: Use <code>Map.put(enum, key, value)</code></li>
             <li>Use <code>Enum.filter(enum, function)</code> to get all items in <code>%{a: 3, b: 12, c: 9, d: 15}</code> where value is greater than 10. </li>
             <li>Using pipes and <code>Enum.take(enum, number)</code>, modify code in #1 to only return 1 item.</li>
           </ol>
           <p>Hint: Use <code>{key, value}</code> to extract the keys and values in your anonymous function</p>
-          <p>-</p>
-          <p>Take 10 minutes. Josh and I will be walking around.</p>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 4 Answer</h2>
           <pre><code>
 iex> map = %{a: 3, b: 12, c: 9, d: 15}
 %{a: 3, b: 12, c: 9, d: 15}
@@ -441,19 +446,17 @@ end
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 5</h2>
           <ol>
             <li>Add a <code>sum</code> function that sums every number in a list</li>
             <li>Uncomment the tests for <code>sum</code> in <code>test/workshop_test.exs</code> and make them pass</li>
           </ol>
           <p>Hint: use <code>Enum.reduce(enum, 0, fn (num, accumulator))</code></p>
           <p>Run tests with <code>mix test</code> in console.</p>
-          <p>-</p>
-          <p>Take 10 minutes. Josh and I will be walking around.</p>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 5 Answer</h2>
           <pre><code>
 def sum(list) do
   Enum.reduce(list, 0, fn (num, acc) -> num + acc end)
@@ -483,33 +486,53 @@ end
         </section>
 
         <section>
-          <h2>Exercise</h2>
-          <p>Let's write a variation of FizzBuzz!</p>
-          <ol>
-            <li>Write multiple versions of the function <code>fizzbuzz</code></li>
-            <li>If called with <code>3</code>, return <code>"Fizz"</code></li>
-            <li>If called with <code>5</code>, return <code>"Buzz"</code></li>
-            <li>If called with anything else, simply return what was passed in</li>
-          </ol>
-          <p>Uncomment and run tests with <code>mix test</code>.</p>
-          <p>-</p>
-          <p>Take 10 minutes. Josh and I will be walking around.</p>
-          <p>If you have a question, raise your hand or ask your neighbor.</p>
+          <h3>Function Guards</h3>
+          <p>You can further restrict if a function is called with a guard clause</p>
+          <pre><code>
+# lib/workshop.exs
+defmodule Workshop do
+  ...
+
+  def guarded_divide(dividend, divisor) when divisor > 0 do
+    dividend / divisor
+  end
+
+end
+          </code></pre>
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 6</h2>
+          <p>Let's write FizzBuzz!</p>
+          <ol>
+            <li>Write multiple versions of the function <code>fizzbuzz</code></li>
+            <li>If called with a variable of <code>3</code>, return <code>"Fizz"</code></li>
+            <li>If called with a variable of <code>5</code>, return <code>"Buzz"</code></li>
+            <li>If called with a variable of <code>3</code> and <code>5</code>, return <code>"FizzBuzz"</code></li>
+            <li>If called with anything else, simply return what was passed in</li>
+          </ol>
+          <p>Uncomment and run tests with <code>mix test</code>.</p>
+          <p>Hint: To check a remainder use <code>rem(number, 3)</code></p>
+          <p>Hint: The first function defined is the first to match</p>
+        </section>
+
+        <section>
+          <h2>Exercise 6 Answer</h2>
           <pre><code>
-def fizzbuzz(3) do
+def fizzbuzz(n) when rem(n, 3) == 0 and rem(n, 5) == 0 do
+  "FizzBuzz"
+end
+
+def fizzbuzz(n) when rem(n, 3) == 0 do
   "Fizz"
 end
 
-def fizzbuzz(5) do
+def fizzbuzz(n) when rem(n, 5) == 0 do
   "Buzz"
 end
 
-def fizzbuzz(val) do
-  val
+def fizzbuzz(n) do
+  n
 end
           </code></pre>
         </section>
@@ -643,7 +666,7 @@ iex> Workshop.add_one([1, 2, 3, 10])
         </section>
 
         <section>
-          <h2>Exercise</h2>
+          <h2>Exercise 7</h2>
           <p>Using recursion and pattern matching, write the function <code>square_list</code> which squares a list of numbers</p>
           <ol>
             <li>Define your base case (handle empty list)</li>
@@ -655,7 +678,7 @@ iex> Workshop.add_one([1, 2, 3, 10])
         </section>
 
         <section>
-          <h2>Exercise Answer</h2>
+          <h2>Exercise 7 Answer</h2>
           <pre><code>
 def square_list([]) do
   []
@@ -675,8 +698,16 @@ end
         </section>
 
         <section>
+          <h2>Group Sites & Chat</h2>
+          <p>GitHub: <a href="https://github.com/boulder-elixir">https://github.com/boulder-elixir</a></p>
+          <p>Elixir Slack Group, there's a #boulder channel</p>
+          <p>Feel free to message me at <code>tracehelms</code></p>
+          <p>Sign Up: <a href="https://elixir-slackin.herokuapp.com/">https://elixir-slackin.herokuapp.com/</a></p>
+        </section>
+
+        <section>
           <h2>Next Time</h2>
-          <p>Presentations: message me if you want to talk</p>
+          <p>Let me know if you want to give a presentation!</p>
         </section>
       </div>
     </div>

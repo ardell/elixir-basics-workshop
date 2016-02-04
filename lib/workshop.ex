@@ -18,6 +18,10 @@ defmodule Workshop do
     dividend / divisor
   end
 
+  def guarded_divide(dividend, divisor) when divisor > 0 do
+    dividend / divisor
+  end
+
   def add_one([]) do
     []
   end
