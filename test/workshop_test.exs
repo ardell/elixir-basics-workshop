@@ -38,13 +38,13 @@ defmodule WorkshopTest do
 
   # Exercise tests, uncomment these as you work on exercises
 
-  # test "sum sums every number in a list" do
-  #   assert W.sum([]) == 0
-  #   assert W.sum([1]) == 1
-  #   assert W.sum([1, 2, 3, 4]) == 10
-  #   assert W.sum([1, 2, 3, -4]) == 2
-  # end
-  #
+  test "sum sums every number in a list" do
+    assert W.sum([]) == 0
+    assert W.sum([1]) == 1
+    assert W.sum([1, 2, 3, 4]) == 10
+    assert W.sum([1, 2, 3, -4]) == 2
+  end
+
   # test "fizzbuzz" do
   #   assert W.fizzbuzz(3) == "Fizz"
   #   assert W.fizzbuzz(5) == "Buzz"

@@ -1,5 +1,9 @@
 defmodule Workshop do
 
+  def sum(list) do
+    Enum.reduce(list, 0, fn(x, acc) -> x+acc end)
+  end
+
   # examples
 
   def add(a, b) do
