@@ -4,6 +4,22 @@ defmodule Workshop do
     Enum.reduce(list, 0, fn(x, acc) -> x+acc end)
   end
 
+  def fizzbuzz(value) when rem(value, 3) == 0 and rem(value, 5) == 0do
+    "FizzBuzz"
+  end
+
+  def fizzbuzz(value) when rem(value, 3) == 0 do
+    "Fizz"
+  end
+
+  def fizzbuzz(value) when rem(value, 5) == 0 do
+    "Buzz"
+  end
+
+  def fizzbuzz(value) do
+    value
+  end
+
   # examples
 
   def add(a, b) do

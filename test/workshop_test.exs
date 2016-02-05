@@ -45,13 +45,13 @@ defmodule WorkshopTest do
     assert W.sum([1, 2, 3, -4]) == 2
   end
 
-  # test "fizzbuzz" do
-  #   assert W.fizzbuzz(3) == "Fizz"
-  #   assert W.fizzbuzz(5) == "Buzz"
-  #   assert W.fizzbuzz(15) == "FizzBuzz"
-  #   assert W.fizzbuzz("a") == "a"
-  # end
-  #
+  test "fizzbuzz" do
+    assert W.fizzbuzz(3) == "Fizz"
+    assert W.fizzbuzz(5) == "Buzz"
+    assert W.fizzbuzz(15) == "FizzBuzz"
+    assert W.fizzbuzz("a") == "a"
+  end
+
   # test "square_list handles empty list" do
   #   assert W.square_list([]) == []
   #
